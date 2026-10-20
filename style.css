@@ -10,9 +10,9 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
 
 /* TV composition: reserve the footer and keep every work field readable. */
-.board header{height:64px}.board .heading{margin:20px 0 24px}.board .heading h1{font-size:56px}.board .lane-heading{padding:12px 4px 20px}.board .work-card{gap:14px}.board .work-card .eyebrow{font-size:32px;letter-spacing:0}.board .status{font-size:32px}.board .facts{gap:12px}.board .expectation{padding-top:14px}.board footer{flex-shrink:0;height:54px}.board .work-card{min-height:0}
+.board header{height:64px}.board .heading{margin:12px 0 12px}.board .heading h1{font-size:56px}.board .lane-heading{padding:12px 4px 8px}.board .work-card{gap:14px}.board .work-card .eyebrow{font-size:32px;letter-spacing:0}.board .status{font-size:32px}.board .facts{gap:16px}.board .expectation{padding-top:14px}.board footer{flex-shrink:0;height:54px}.board .work-card{min-height:0}
 
-.board .work-card{padding:20px;gap:12px}.board .expectation{padding-top:10px}.board .expectation>span{margin-bottom:6px}.board .lane.in-progress h3{font-size:48px}.board .work-card h3{line-height:1.12}
+.board .work-card{padding:20px;gap:20px}.board .expectation{padding-top:10px}.board .expectation>span{margin-bottom:6px}.board .lane.in-progress h3{font-size:48px}.board .work-card h3{line-height:1.12}
 .spotlight .heading{margin:16px 0 24px}.spotlight .heading h1{font-size:60px}.spotlight footer{height:54px;flex-shrink:0}.spotlight .support .work-card{padding:16px 20px;gap:8px;min-height:0}.spotlight .support .status{top:12px;right:20px;font-size:30px}.spotlight .support .facts{gap:6px}.spotlight .support .eyebrow{font-size:30px;letter-spacing:0}.spotlight .support .expectation p{line-height:1.2}.spotlight .hero .status{font-size:32px}.spotlight .hero .eyebrow{font-size:32px;letter-spacing:0}
 .timeline .work-card .eyebrow,.timeline .work-card .status{font-size:32px;letter-spacing:0}.week-head>span:not(:first-child){font-size:30px}
 
@@ -77,3 +77,10 @@
 [data-theme="dark"] .timeline .status.in-progress,[data-theme="dark"] .spotlight .support .status.in-progress{background:var(--color-blue);color:white;padding:6px 12px;border-radius:8px}
 [data-theme="dark"] .mini:not(.spotlight) div{background:var(--color-dark-panel)}
 [data-theme="dark"] .mini.timeline div{background:var(--color-blue)}
+
+/* Team view: separate workstream, task, facts, and the next action. */
+.board{--board-label:var(--color-blue-hover);--board-next:color-mix(in srgb,var(--color-warning) 48%,var(--color-dark));--board-done:var(--color-text-subtle)}
+[data-theme="dark"] .board{--board-label:color-mix(in srgb,var(--color-blue) 70%,white);--board-next:var(--color-warning);--board-done:color-mix(in srgb,var(--color-text-primary) 62%,var(--color-dark-panel))}
+.board .work-card .eyebrow{color:var(--board-label)}
+.board .expectation>span{color:var(--board-next);font-weight:600}
+.board .lane.done,.board .lane.done .eyebrow,.board .lane.done .expectation>span{color:var(--board-done)}
