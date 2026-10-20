@@ -84,3 +84,20 @@
 .board .work-card .eyebrow{color:var(--board-label)}
 .board .expectation>span{color:var(--board-next);font-weight:600}
 .board .lane.done,.board .lane.done .eyebrow,.board .lane.done .expectation>span{color:var(--board-done)}
+
+/* Delivery view: shared status colors connect milestones to their detail cards. */
+.timeline{--delivery-label:var(--color-blue-hover);--delivery-next:color-mix(in srgb,var(--color-warning) 48%,var(--color-dark))}
+[data-theme="dark"] .timeline{--delivery-label:color-mix(in srgb,var(--color-blue) 70%,white);--delivery-next:var(--color-warning)}
+.timeline .milestone.selected{outline:none}
+.timeline .milestone.in-progress,.timeline .work-card .status.in-progress{background:var(--color-blue);color:white}
+.timeline .milestone.done{background:var(--color-success);color:white}
+.timeline .milestone.blocked{background:var(--color-warning);color:var(--color-dark)}
+.timeline .milestone.upcoming{background:var(--color-light-secondary);color:var(--color-text-primary)}
+.timeline .work-card{padding:28px 32px;gap:16px 24px}
+.timeline .work-card .eyebrow{color:var(--delivery-label);font-weight:600;font-size:26px}
+.timeline .work-card h3,.timeline .delivery-cards>.work-card:only-child h3{font-size:40px;line-height:1.15}
+.timeline .work-card .facts{gap:12px 24px}
+.timeline .work-card .hours{color:var(--color-text-subtle)}
+.timeline .expectation{padding-top:16px}
+.timeline .expectation p:before{color:var(--delivery-next);font-weight:600}
+.timeline .work-card.done .expectation p:before{color:var(--color-text-subtle)}
