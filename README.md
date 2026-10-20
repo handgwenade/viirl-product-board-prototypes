@@ -4,7 +4,9 @@ Three runnable, review-only concepts for Gwen and Gregg. All records and owner r
 
 ## Public preview
 
-[Open the prototypes](https://handgwenade.github.io/viirl-product-board-prototypes/) · [GitHub repository](https://github.com/handgwenade/viirl-product-board-prototypes)
+[Open the Vercel preview](https://viirl-product-board-prototypes.vercel.app/) · [GitHub Pages mirror](https://handgwenade.github.io/viirl-product-board-prototypes/) · [GitHub repository](https://github.com/handgwenade/viirl-product-board-prototypes)
+
+Vercel and GitHub Pages publish the `codex/preview` branch. The Vercel project is `viirl-product-board-prototypes` in Gwen’s personal workspace; it serves this static folder with no build or install step.
 
 GitHub Pages serves the root of the `codex/preview` branch. Push committed changes to that branch to update the preview. The repository and preview are public; keep all content fictional.
 
