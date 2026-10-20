@@ -111,8 +111,8 @@
 .spotlight .hero .expectation>span,.spotlight .support .expectation p:before{color:var(--spotlight-next);font-weight:600}
 .spotlight .support .done .expectation p:before{color:var(--spotlight-accepted)}
 
-/* Team due-state words carry urgency without adding another badge. */
-.board .due-status.scheduled{color:var(--board-label)}
-.board .due-status.due-soon,.board .due-status.due-today{color:var(--board-next)}
-.board .due-status.overdue{color:var(--color-error)}
-.board .due-status.delivered{color:var(--board-done)}
+/* Color the full Team date line, including missing dates. */
+.board .date{color:var(--board-label)}
+.board .date.due-soon,.board .date.due-today{color:var(--board-next)}
+.board .date.overdue{color:var(--color-error)}
+.board .lane.done .date{color:var(--board-done)}

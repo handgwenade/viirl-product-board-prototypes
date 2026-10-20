@@ -22,7 +22,7 @@ const slug = status => status.toLowerCase().replaceAll(' ', '-');
 const symbols = { Upcoming: '○', 'In progress': '◉', Blocked: '⚠', Done: '✓' };
 const statusTag = item => `<span class="status ${slug(item.status)}">${symbols[item.status]} ${esc(item.status)}</span>`;
 function facts(item) {
-  return `<div class="facts"><div>Owner <strong>${esc(item.owner)}</strong></div><div class="date ${dueState(item) === 'Overdue' ? 'overdue' : ''}">Due ${dateLabel(item.due)}${item.due ? ` · <span class="due-status ${slug(dueState(item))}">${dueState(item)}</span>` : ''}</div><div class="hours">${hours(item)}</div></div>`;
+  return `<div class="facts"><div>Owner <strong>${esc(item.owner)}</strong></div><div class="date ${slug(dueState(item))}">Due ${dateLabel(item.due)}${item.due ? ` · <span class="due-status ${slug(dueState(item))}">${dueState(item)}</span>` : ''}</div><div class="hours">${hours(item)}</div></div>`;
 }
 function card(item, extra = '') {
   if (!item) return '<article class="work-card empty">No work in this stage</article>';
